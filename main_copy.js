@@ -308,17 +308,17 @@ function createPageTwo() {
     option.value = element;
     inputOne.appendChild(option);
 
-    function playFanfare() {
-      let mainAudio = document.createElement("audio");
-      mainAudio.id = "fanfare";
-      mainAudio.src = "./soundfiles/fanfare.wav";
-      // audio.controls = true;
-      // audio.volume = 0.3;
-      mainDiv.appendChild(mainAudio);
-      mainAudio.play();
-    }
-    playFanfare();
-  });
+  //   function playFanfare() {
+  //     let mainAudio = document.createElement("audio");
+  //     mainAudio.id = "fanfare";
+  //     mainAudio.src = "./soundfiles/fanfare.wav";
+  //     // audio.controls = true;
+  //     // audio.volume = 0.3;
+  //     mainDiv.appendChild(mainAudio);
+  //     mainAudio.play();
+  //   }
+  //   playFanfare();
+  // });
 
   let inputTwo = document.createElement("input");
   inputTwo.type = "submit";
