@@ -241,7 +241,7 @@ function homeScreen() {
 
   secretEntranceWord.style.transform = "scale(1.5)";
   secretEntranceWord.style.opacity = "1";
-  secretEntranceWord.style.color = "black";
+  secretEntranceWord.style.color = "#B0C2D7";
   secretEntranceWord.style.borderBottom = "solid";
   clue.style.opacity = "1";
 
