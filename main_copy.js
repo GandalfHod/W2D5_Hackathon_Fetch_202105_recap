@@ -231,7 +231,7 @@ function enter() {
   mainDiv.appendChild(enterVideo);
   playVid2();
   setTimeout(createPageTwo, 3500);
-  
+
 }
 
 // let notPassVideo = document.querySelector("video");
@@ -279,10 +279,9 @@ secretEntranceWord.addEventListener("click", enter);
 
 function createPageTwo() {
   let body = document.querySelector("#body");
- body.style.backgroundImage = "url('https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg')"
+  body.style.backgroundImage = "url('https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg')"
   let enterVideoRemove = document.querySelector("#entrance-video");
-  mainDiv.removeChild(enterVideoRemove); 
-
+  mainDiv.removeChild(enterVideoRemove);
 
   let title = document.createElement("h1");
   title.id = "title";
@@ -308,6 +307,17 @@ function createPageTwo() {
     option.appendChild(document.createTextNode(element));
     option.value = element;
     inputOne.appendChild(option);
+
+    function playFanfare() {
+      let mainAudio = document.createElement("audio");
+      mainAudio.id = "fanfare";
+      mainAudio.src = "./soundfiles/fanfare.wav";
+      // audio.controls = true;
+      // audio.volume = 0.3;
+      mainDiv.appendChild(mainAudio);
+      mainAudio.play();
+    }
+    playFanfare();
   });
 
   let inputTwo = document.createElement("input");
@@ -357,7 +367,7 @@ function characterInformation(characterObject) {
           Accept: "application/json",
           Authorization: `Bearer ${token}`,
         },
-      } 
+      }
     );
     let data = await response.json();
 
