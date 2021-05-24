@@ -266,6 +266,9 @@ entranceButton.addEventListener("click", noEntry);
 secretEntranceWord.addEventListener("click", enter);
 
 function createPageTwo() {
+  let body = document.querySelector("#body");
+ body.style.backgroundImage = "url('https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg')"
+  
   let title = document.createElement("h1");
   title.id = "title";
   title.innerText = "Lord of the Personality Types";
