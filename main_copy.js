@@ -225,7 +225,13 @@ function enter() {
   mainDiv.removeChild(entranceButton);
   mainDiv.removeChild(secretEntranceWord);
   mainDiv.removeChild(clue);
-  createPageTwo();
+  let enterVideo = document.createElement("video");
+  enterVideo.id = "entrance-video";
+  enterVideo.src = "Enter.mov";
+  mainDiv.appendChild(enterVideo);
+  playVid2();
+  setTimeout(createPageTwo, 3500);
+  
 }
 
 // let notPassVideo = document.querySelector("video");
@@ -233,6 +239,12 @@ function playVid() {
   let notPassVideo = document.querySelector("#video");
   notPassVideo.play();
 }
+
+function playVid2() {
+  let enterVideo = document.querySelector("#entrance-video");
+  enterVideo.play();
+}
+
 
 function homeScreen() {
   entranceButton.style.display = "unset";
@@ -268,7 +280,10 @@ secretEntranceWord.addEventListener("click", enter);
 function createPageTwo() {
   let body = document.querySelector("#body");
  body.style.backgroundImage = "url('https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg')"
-  
+  let enterVideoRemove = document.querySelector("#entrance-video");
+  mainDiv.removeChild(enterVideoRemove); 
+
+
   let title = document.createElement("h1");
   title.id = "title";
   title.innerText = "Lord of the Personality Types";
