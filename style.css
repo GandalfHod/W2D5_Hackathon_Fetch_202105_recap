@@ -20,8 +20,9 @@
 
 body {
   /* background: url("https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg") center center cover no-repeat fixed; */
-  background-image: url("https://art.ngfiles.com/images/505000/505877_spectar22_the-doors-of-moria-2.jpg?f1493086368");
-  /* background-image: url("https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg"); */
+  background-image: url("./AmendedImage.png");
+  /* background-image: url("https://art.ngfiles.com/images/505000/505877_spectar22_the-doors-of-moria-2.jpg?f1493086368");
+  background-image: url("https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
