@@ -286,7 +286,16 @@ let body = document.querySelector("#body");
 }
 
 function createPageTwo() {
-  
+  function playFanfare() {
+    let mainAudio = document.createElement("audio");
+    mainAudio.id = "fanfare";
+    mainAudio.src = "./soundfiles/Initial.mp3";
+    // audio.controls = true;
+    audio.volume = 0.1;
+    mainDiv.appendChild(mainAudio);
+    mainAudio.play();
+  }
+  playFanfare();
 
   let title = document.createElement("h1");
   title.id = "title";
@@ -313,16 +322,7 @@ function createPageTwo() {
     option.value = element;
     inputOne.appendChild(option);
 
-    // function playFanfare() {
-    //   let mainAudio = document.createElement("audio");
-    //   mainAudio.id = "fanfare";
-    //   mainAudio.src = "./soundfiles/Main.mp3";
-    //   // audio.controls = true;
-    //   audio.volume = 0.3;
-    //   mainDiv.appendChild(mainAudio);
-    //   mainAudio.play();
-    // }
-    // playFanfare();
+  
 
   });
 
@@ -394,6 +394,7 @@ function characterInformation(characterObject) {
   getCharacterQuoteAndInfo(characterObject);
 
   function clearInput() {
+    
     let tagLineRemove = document.querySelector("#tag-line");
     mainDiv.removeChild(tagLineRemove);
     let inputFormRemove = document.querySelector("#input-form");
@@ -403,7 +404,11 @@ function characterInformation(characterObject) {
   }
 
   function postResults(data, dataInfo) {
-    const characterAttributes = ["race", "birth", "death"];
+    
+    let audioStop = document.querySelector("#fanfare");
+    audioStop.src = "";
+
+  const characterAttributes = ["race", "birth", "death"];
 
     let resultsDiv = document.createElement("div");
     resultsDiv.id = "results-container";
