@@ -282,10 +282,10 @@ let body = document.querySelector("#body");
   body.style.backgroundImage = "url('https://studybreaks.com/wp-content/uploads/2018/04/The-Lord-of-the-Rings.jpg')"
   let enterVideoRemove = document.querySelector("#entrance-video");
   mainDiv.removeChild(enterVideoRemove);
-  createPageTwo();
+  initialMusicOn();
 }
 
-function createPageTwo() {
+function initialMusicOn(){
   function playFanfare() {
     let mainAudio = document.createElement("audio");
     mainAudio.id = "fanfare";
@@ -296,6 +296,13 @@ function createPageTwo() {
     mainAudio.play();
   }
   playFanfare();
+  createPageTwo();
+
+
+}
+
+function createPageTwo() {
+  
 
   let title = document.createElement("h1");
   title.id = "title";
@@ -495,6 +502,9 @@ function characterInformation(characterObject) {
       mainDiv.removeChild(title);
       mainDiv.removeChild(footerDiv);
       createPageTwo();
+      let audioRestart = document.querySelector("#fanfare");
+      audioRestart.src = "./soundfiles/Initial.mp3";
+      audioRestart.play();
     }
 
     function play() {
