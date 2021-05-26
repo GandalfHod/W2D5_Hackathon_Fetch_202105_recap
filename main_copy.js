@@ -218,7 +218,7 @@ function noEntry() {
   video.src = "You_Shall_Not_Pass.mov";
   mainDiv.appendChild(video);
   playVid();
-  setTimeout(homeScreen, 5500);
+  video.addEventListener("ended", homeScreen, false)
 }
 
 function enter() {
@@ -230,8 +230,8 @@ function enter() {
   enterVideo.src = "Enter.mov";
   mainDiv.appendChild(enterVideo);
   playVid2();
-  setTimeout(entranceVideo, 3500);
-
+  //setTimeout(entranceVideo, 3500);
+  enterVideo.addEventListener("ended", entranceVideo, false)
 }
 
 // let notPassVideo = document.querySelector("video");
